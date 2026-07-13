@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  background-image: linear-gradient(135deg, #f72585, #7209b7, #3a0ca3, #4361ee, #4cc9f0); 
+  min-height: 100vh;
+  font-family: 'Bungee', cursive; 
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.2) !important; 
+  backdrop-filter: blur(10px); 
+  border-bottom: 2px solid #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: #fff !important;
+  text-shadow: 2px 2px 0 #f72585; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  transform: rotate(3deg);
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #f7d794 !important; 
+  transform: translateY(-2px);
+}
+
+.btn-outline-light {
+  color: #fff !important;
+  border-color: #fff !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff !important;
+  color: #4361ee !important;
+  transform: scale(1.05);
+}
+
+
+.container.mt-4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

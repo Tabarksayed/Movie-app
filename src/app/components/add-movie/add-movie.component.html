@@ -1,0 +1,73 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Add New Movie</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="addMovieForm" (ngSubmit)="submit()">
+
+            <div class="mb-3">
+              <label class="form-label">Title *</label>
+              <input type="text" class="form-control" formControlName="title">
+              <div *ngIf="submitted && f['title'].errors" class="text-danger mt-1">
+                Title is required.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Poster URL (or Upload)</label>
+              <input type="text" class="form-control mb-2" formControlName="poster" placeholder="Paste image URL">
+              <input type="file" class="form-control" (change)="onFileSelected($event)">
+              <img *ngIf="posterPreview" [src]="posterPreview" class="img-fluid mt-2 rounded shadow-sm" style="max-height:200px;" alt="Poster Preview">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Category *</label>
+              <select class="form-select" formControlName="category">
+                <option value="">Select Category</option>
+                <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+              </select>
+              <div *ngIf="submitted && f['category'].errors" class="text-danger mt-1">
+                Category is required.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Rating *</label>
+              <select class="form-select" formControlName="rating">
+                <option value="">Select Rating</option>
+                <option *ngFor="let r of ratings" [value]="r">{{ r }}</option>
+              </select>
+              <div *ngIf="submitted && f['rating'].errors" class="text-danger mt-1">
+                Rating is required.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Description</label>
+              <textarea class="form-control" rows="3" formControlName="description"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Release Year *</label>
+              <input type="number" class="form-control" formControlName="releaseYear">
+              <div *ngIf="submitted && f['releaseYear'].errors" class="text-danger mt-1">
+                Valid release year is required.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Director</label>
+              <input type="text" class="form-control" formControlName="director">
+            </div>
+
+            <button class="btn btn-primary w-100" type="submit">Add Movie</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

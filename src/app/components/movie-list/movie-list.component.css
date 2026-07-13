@@ -1,0 +1,111 @@
+:host {
+  display: block;
+  background-image: linear-gradient(135deg, #f72585, #7209b7, #3a0ca3, #4361ee, #4cc9f0);
+  min-height: 100vh;
+  padding: 40px 0;
+  font-family: 'Bungee', cursive;
+}
+
+
+.container.mt-4 {
+  color: #fff;
+}
+
+.d-flex.justify-content-between {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 3px solid #fff;
+}
+
+h3.text-primary {
+  color: #fff !important;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 0 #3a0ca3;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+label {
+  color: #fce4ec; 
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-select {
+  background-color: #ffeaff;
+  color: #7209b7;
+  border: 2px solid #7209b7;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.form-select:focus {
+  border-color: #4361ee;
+  box-shadow: 0 0 10px #4cc9f0;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 5px solid #4361ee;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-8px) rotate(2deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 400px;
+  object-fit: cover;
+  border-bottom: 3px dashed #f72585;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-title {
+  color: #3a0ca3;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.card-text {
+  color: #7209b7;
+  font-family: 'Arial', sans-serif; 
+}
+
+.card-footer {
+  background-color: #fce4ec;
+  border-top: 3px dashed #f72585;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  padding: 1rem;
+}
+
+
+.btn-success {
+  background: linear-gradient(45deg, #f72585, #7209b7);
+  border: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-success:hover {
+  transform: scale(1.05);
+}
+
+.btn-success[disabled] {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}

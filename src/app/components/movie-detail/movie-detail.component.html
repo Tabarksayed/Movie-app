@@ -1,0 +1,19 @@
+<div *ngIf="movie; else notFound" class="card">
+  <img [src]="movie.poster" class="card-img-top" alt="{{ movie.title }}">
+  <div class="card-body">
+    <h2 class="card-title">{{ movie.title }}</h2>
+
+    <div class="card-details">
+      <p><strong>Category:</strong> {{ movie.category }}</p>
+      <p><strong>Rating:</strong> {{ movie.rating }}</p>
+      <p><strong>Release Year:</strong> {{ movie.releaseYear }}</p>
+      <p><strong>Director:</strong> {{ movie.director || 'Unknown' }}</p>
+    </div>
+
+    <p class="card-description">{{ movie.description }}</p>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <p class="text-center mt-4 text-danger">Movie not found!</p>
+</ng-template>
